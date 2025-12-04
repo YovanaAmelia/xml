@@ -129,6 +129,7 @@ foreach($ies["programas_estudio"] as $indicePE => $PEs) {
 $archivo = "ies.xml";
 $xml->save($archivo);
 
+echo "XML generado correctamente";
 
 
 ?>
