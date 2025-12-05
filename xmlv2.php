@@ -41,7 +41,13 @@ while($pe = mysqli_fetch_assoc($resultado)){
     $fecha_registro = $xml->createElement('fecha_registro', $pe['fecha_registro']);
     $plan->appendChild($fecha_registro);
 
+   
 
+  
+    $et_planes->appendChild($plan);
+
+
+    
     }
 
     $et_planes->appendChild($plan);
