@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<programas_estudio>
+  <pe_1>
+    <codigo>DPW</codigo>
+    <tipo>Modular</tipo>
+    <nombre>DISEÑO Y PROGRAMACIÓN WEB</nombre>
+  </pe_1>
+</programas_estudio>
+<planes_estudio>
+  <plan_9>
+    <id_programa_estudios>5</id_programa_estudios>
+    <nombre>2025</nombre>
+    <resolucion>--</resolucion>
+    <fecha_registro>2025-08-11 09:00:46</fecha_registro>
+  </plan_9>
+</planes_estudio>
