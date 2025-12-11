@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "para_examen_01";
+$dbname = "para_xml";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password);
