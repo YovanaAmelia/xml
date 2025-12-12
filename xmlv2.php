@@ -1,5 +1,5 @@
 <?php
-$conexion = new mysqli("localhost", "root", "", "sigi_huanta");
+$conexion = new mysqli("localhost", "root", "root", "para_xml_00");
 if ($conexion->connect_errno) {
     echo "Fallo al conectar a MySQL: (" . $conexion->connect_errno . ") " . $conexion->connect_error;
 }

@@ -1,9 +1,9 @@
 <?php
-// ======================= CONEXIÓN A LA BASE DE DATOS =========================
+//  CONEXIÓN A LA BASE DE DATOS
 $servername = "localhost";
 $username = "root";
-$password = "";
-$dbname = "para_xml";
+$password = "root";
+$dbname = "tarea";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password);
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// ======================= VERIFICAR Y CREAR BASE DE DATOS =========================
+//  VERIFICAR Y CREAR BASE DE DATOS 
 $sql_check_db = "SHOW DATABASES LIKE '$dbname'";
 $result_check_db = $conn->query($sql_check_db);
 
@@ -31,7 +31,7 @@ if ($result_check_db->num_rows == 0) {
 // Seleccionar la base de datos
 $conn->select_db($dbname);
 
-// ======================= VERIFICAR Y CREAR TABLAS =========================
+//  VERIFICAR Y CREAR TABLAS 
 // Tabla: sigi_programa_estudios
 $sql_check_programa = "SHOW TABLES LIKE 'sigi_programa_estudios'";
 $result_check_programa = $conn->query($sql_check_programa);
@@ -135,7 +135,7 @@ if ($result_check_unidades->num_rows == 0) {
     echo "<p>La tabla 'sigi_unidad_didactica' ya existe.</p>";
 }
 
-// ======================= LEER Y PROCESAR XML =========================
+//  LEER Y PROCESAR XML 
 $xmlFile = "ies_db.xml";
 if (!file_exists($xmlFile)) {
     die("<p>El archivo XML '$xmlFile' no existe.</p>");
@@ -146,7 +146,7 @@ if ($xml === false) {
     die("<p>Error al cargar el archivo XML.</p>");
 }
 
-// ======================= VERIFICAR Y INSERTAR DATOS DESDE XML =========================
+//  VERIFICAR Y INSERTAR DATOS DESDE XML 
 echo "<h2>Inserción de datos desde el XML:</h2>";
 
 // Insertar programas de estudio
